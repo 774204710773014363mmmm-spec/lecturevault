@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LectureVault" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">#FFD4AF37</item>
+        <item name="android:colorPrimaryDark">#FF0F172A</item>
+        <item name="android:colorAccent">#FF38BDF8</item>
+        <item name="android:statusBarColor">#FF0F172A</item>
+        <item name="android:navigationBarColor">#FF0F172A</item>
+    </style>
+</resources>
