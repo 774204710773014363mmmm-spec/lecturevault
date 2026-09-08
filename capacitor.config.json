@@ -1,0 +1,14 @@
+{
+  "appId": "com.lecturevault.app",
+  "appName": "منسق المحاضرات",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  }
+}
