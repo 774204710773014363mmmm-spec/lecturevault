@@ -1,0 +1,25 @@
+{
+  "projectId": "a99c8bae-ef1c-45c9-b17e-216560ec55c5",
+  "type": "frontend",
+  "name": "Lecture Vault - PDF Export & Arabic UI Verification",
+  "description": "Verifies subject navigation, lecture selection, PDF export modal, 'All Lectures' option, and Arabic typography rendering.",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to https://ais-pre-kgcq2gl6ckl7maehohqyyc-345087606635.europe-west2.run.app and load the main application dashboard"
+    },
+    {
+      "type": "action",
+      "description": "Click on the PDF Export button in the navigation header to open the PDF Export modal"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify that the PDF export modal is visible and displays the title in Arabic"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify that the lecture dropdown contains the 'كل المحاضرات (كامل المادة)' option"
+    }
+  ]
+}
