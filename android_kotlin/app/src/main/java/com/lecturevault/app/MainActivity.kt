@@ -24,6 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.text.TextStyle
 import com.lecturevault.app.models.*
 
 class MainActivity : ComponentActivity() {
@@ -132,7 +133,7 @@ fun LectureVaultApp() {
                 contentColor = Color(0xFF94A3B8)
             ) {
                 NavigationBarItem(
-                    icon = { Icon(Icons.Default.Explore, contentDescription = null) },
+                    icon = { Icon(Icons.Default.Search, contentDescription = null) },
                     label = { Text("الاستكشاف") },
                     selected = activeTab == "explorer",
                     onClick = { activeTab = "explorer" },
@@ -143,7 +144,7 @@ fun LectureVaultApp() {
                     )
                 )
                 NavigationBarItem(
-                    icon = { Icon(Icons.Default.PictureAsPdf, contentDescription = null) },
+                    icon = { Icon(Icons.Default.Share, contentDescription = null) },
                     label = { Text("تصدير PDF") },
                     selected = activeTab == "pdf",
                     onClick = { activeTab = "pdf" },
@@ -264,7 +265,7 @@ fun ExplorerScreen(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Icon(
-                                Icons.Default.School,
+                                Icons.Default.Star,
                                 contentDescription = null,
                                 tint = if (selectedYear.id == year.id) Color(0xFFD4AF37) else Color(0xFF94A3B8),
                                 modifier = Modifier.size(32.dp)
@@ -283,7 +284,7 @@ fun ExplorerScreen(
                                 )
                             }
                             Icon(
-                                Icons.Default.ChevronLeft,
+                                Icons.Default.ArrowBack,
                                 contentDescription = null,
                                 tint = Color(0xFF94A3B8)
                             )
@@ -320,7 +321,7 @@ fun ExplorerScreen(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Icon(
-                                Icons.Default.CalendarMonth,
+                                Icons.Default.DateRange,
                                 contentDescription = null,
                                 tint = if (selectedSemester.id == semester.id) Color(0xFF38BDF8) else Color(0xFF94A3B8),
                                 modifier = Modifier.size(28.dp)
@@ -339,7 +340,7 @@ fun ExplorerScreen(
                                 )
                             }
                             Icon(
-                                Icons.Default.ChevronLeft,
+                                Icons.Default.ArrowBack,
                                 contentDescription = null,
                                 tint = Color(0xFF94A3B8)
                             )
@@ -372,7 +373,7 @@ fun ExplorerScreen(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Icon(
-                                Icons.Default.Book,
+                                Icons.Default.List,
                                 contentDescription = null,
                                 tint = Color(0xFF38BDF8),
                                 modifier = Modifier.size(28.dp)
@@ -391,7 +392,7 @@ fun ExplorerScreen(
                                 )
                             }
                             Icon(
-                                Icons.Default.ChevronLeft,
+                                Icons.Default.ArrowBack,
                                 contentDescription = null,
                                 tint = Color(0xFF94A3B8)
                             )
@@ -443,7 +444,7 @@ fun ExplorerScreen(
                         ) {
                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                 Icon(
-                                    Icons.Default.MenuBook,
+                                    Icons.Default.List,
                                     contentDescription = null,
                                     tint = Color(0xFF475569),
                                     modifier = Modifier.size(64.dp)
@@ -494,7 +495,7 @@ fun ExplorerScreen(
                                 )
                             }
                             Icon(
-                                Icons.Default.CameraAlt,
+                                Icons.Default.Add,
                                 contentDescription = "التقاط صورة",
                                 tint = Color(0xFF38BDF8),
                                 modifier = Modifier
@@ -541,7 +542,7 @@ fun PdfExportScreen(
                 ) {
                     Column(modifier = Modifier.padding(20.dp)) {
                         Icon(
-                            Icons.Default.PictureAsPdf,
+                            Icons.Default.Share,
                             contentDescription = null,
                             tint = Color(0xFFD4AF37),
                             modifier = Modifier.size(48.dp)
@@ -617,7 +618,7 @@ fun PdfExportScreen(
                     ),
                     shape = RoundedCornerShape(12.dp)
                 ) {
-                    Icon(Icons.Default.Download, contentDescription = null)
+                    Icon(Icons.Default.Add, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = "تصدير PDF",
@@ -653,13 +654,13 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
             item {
                 SettingsSection(title = "المظهر") {
                     SettingsItem(
-                        icon = Icons.Default.DarkMode,
+                        icon = Icons.Default.Star,
                         title = "الوضع الداكن",
                         subtitle = "مفعّل",
                         onClick = { }
                     )
                     SettingsItem(
-                        icon = Icons.Default.Language,
+                        icon = Icons.Default.Star,
                         title = "اللغة",
                         subtitle = "العربية",
                         onClick = { }
@@ -670,13 +671,13 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
             item {
                 SettingsSection(title = "البيانات") {
                     SettingsItem(
-                        icon = Icons.Default.CloudUpload,
+                        icon = Icons.Default.Add,
                         title = "رفع البيانات للسحابة",
                         subtitle = "مزامنة مع Firebase",
                         onClick = { }
                     )
                     SettingsItem(
-                        icon = Icons.Default.CloudDownload,
+                        icon = Icons.Default.Add,
                         title = "تنزيل البيانات",
                         subtitle = "آخر مزامنة: اليوم",
                         onClick = { }
@@ -756,10 +757,11 @@ fun SettingsItem(
             )
         }
         Icon(
-            Icons.Default.ChevronLeft,
+            Icons.Default.ArrowBack,
             contentDescription = null,
             tint = Color(0xFF475569)
         )
     }
 }
+
 
