@@ -1,0 +1,6 @@
+{
+  "name": "منسق المحاضرات الجامعية",
+  "description": "تطبيق متكامل لتنظيم وتجميع صور المحاضرات الجامعية وتحويلها إلى PDF مع نظام الاستيراد والتصدير الذكي والإضافة السريعة.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
